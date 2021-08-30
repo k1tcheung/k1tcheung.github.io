@@ -46,7 +46,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -58,7 +58,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>KitCheung</strong>
+      <strong>Fluid</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -131,18 +131,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -162,7 +150,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default2_2.png') no-repeat center center;
+         style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -195,17 +183,17 @@
   
     
     <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://jnsec.org/" class="card-body hover-with-bg" target="_blank" rel="noopener">
+      <a href="https://hexo.fluid-dev.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/link/jnsec.png" srcset="/img/loading.gif" lazyload alt="JNSEC"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
+              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Blog"
+                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
-            <div class="link-title">JNSEC</div>
-            <div class="link-intro">JNSEC</div>
+            <div class="link-title">Fluid Blog</div>
+            <div class="link-intro">主题博客</div>
           </div>
         </div>
       </a>
@@ -213,17 +201,17 @@
   
     
     <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="http://blog.yd0ng.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
+      <a href="https://hexo.fluid-dev.com/docs/" class="card-body hover-with-bg" target="_blank" rel="noopener">
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/link/yd0ng.png" srcset="/img/loading.gif" lazyload alt="yd0ng"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
+              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Docs"
+                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
-            <div class="link-title">yd0ng</div>
-            <div class="link-intro">yd0ng's Blog</div>
+            <div class="link-title">Fluid Docs</div>
+            <div class="link-intro">主题使用指南</div>
           </div>
         </div>
       </a>
@@ -231,125 +219,17 @@
   
     
     <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://tty-flag.github.io/" class="card-body hover-with-bg" target="_blank" rel="noopener">
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener">
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/link/tty.png" srcset="/img/loading.gif" lazyload alt="TTY"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
+              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Repo"
+                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
-            <div class="link-title">TTY</div>
-            <div class="link-intro">TTY's Blog</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="http://rave1sking.top/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/link/rave.png" srcset="/img/loading.gif" lazyload alt="Rave"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Rave</div>
-            <div class="link-intro">Rave's Blog</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://twzx.gitee.io/wuyi000925.github.io/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/link/bruce.png" srcset="/img/loading.gif" lazyload alt="Bruce"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Bruce</div>
-            <div class="link-intro">Bruce's Blog</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.squidward.xyz/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/link/octopus.png" srcset="/img/loading.gif" lazyload alt="Octopus"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Octopus</div>
-            <div class="link-intro">Octopus's Blog</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://blog.csdn.net/weixin_45396639" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/link/ronie.png" srcset="/img/loading.gif" lazyload alt="Ronie"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Ronie</div>
-            <div class="link-intro">Ronie's Blog</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hellorootkit.github.io/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/link/rootkit.png" srcset="/img/loading.gif" lazyload alt="rootkit"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">rootkit</div>
-            <div class="link-intro">rootkit's Blog</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://rhoeo.github.io/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/link/rhoeo.png" srcset="/img/loading.gif" lazyload alt="Rhoeo"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/link/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Rhoeo</div>
-            <div class="link-intro">Rhoeo's Blog</div>
+            <div class="link-title">Fluid Repo</div>
+            <div class="link-intro">主题 GitHub 仓库</div>
           </div>
         </div>
       </a>
@@ -359,13 +239,6 @@
 
 
 
-
-  <!-- Comments -->
-  <article class="comments" id="comments" lazyload>
-    
-    
-
-  </article>
 
 
               </div>
@@ -413,30 +286,6 @@
      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
   
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
-    
-  </div>
-
 
   
 
@@ -508,8 +357,6 @@
 
 
 
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
 
 
 
@@ -533,19 +380,6 @@
 
 
 
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 
 
