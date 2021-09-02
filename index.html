@@ -199,7 +199,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/08/31/IDApro-%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" target="_self">
+          <img src="/img/IDApro-%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/IDApro%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97.png" srcset="/img/loading.gif" lazyload alt="IDApro 权威指南">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2021/08/31/IDApro-%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" target="_self">
@@ -213,7 +219,7 @@
           
             
           
-          摘要断
+          逆向好难
         </a>
       </p>
 
@@ -238,7 +244,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/IDA-%E4%BA%8C%E8%BF%9B%E5%88%B6-%E9%80%86%E5%90%91/">IDA,二进制,逆向</a>
+              <a href="/tags/IDA/">IDA</a>
+            
+              <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/">二进制</a>
+            
+              <a href="/tags/%E9%80%86%E5%90%91/">逆向</a>
             
           </div>
         
@@ -437,19 +447,19 @@
 
     
       
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            承蒙 
+            <span id="busuanzi_value_site_uv"></span>
+             位朋友
           </span>
       
       
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            造访 
+            <span id="busuanzi_value_site_pv"></span>
+             次
           </span>
       
     
@@ -457,27 +467,31 @@
 
 
   
+    <div class="datatime">
+        <!-- 网站运行时间的设置 -->
+        <span id="timeDate">载入天数...</span>
+        <span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date();
+            function createtime() { 
+                var grt= new Date("08/30/2021 00:00:00");//此处修改你的建站时间或者网站上线时间 
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "本站已小心翼翼地运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒了~"; 
+            } 
+        setInterval("createtime()",250);
+  </script>
+    </div>
 
   
-  <!-- 网站运行时间的设置 -->
-  <span id="timeDate">载入天数...</span>
-  <span id="times">载入时分秒...</span>
-  <script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("08/30/2021 00:00:00");//此处修改你的建站时间或者网站上线时间 
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-    } 
-  setInterval("createtime()",250);
-  </script>
+
+  
 </footer>
 
   <!-- SCRIPTS -->
@@ -580,5 +594,5 @@
   <!--单击显示文字-->
   <script type="text/javascript" src="/js/diy/click_show_text.js"></script>
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":30,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
