@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="没想到签到题都做的不明不白。。。">
+  <meta name="author" content="Kit Cheung">
+  <meta name="keywords" content="">
+  <meta name="description" content="没想到签到题都做的不明不白。。。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“东华杯”2021年大学生网络安全邀请赛暨第七届上海市大学生网络安全大赛">
+<meta property="og:url" content="https://example.com/2021/11/03/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/index.html">
+<meta property="og:site_name" content="菜猫的博客">
+<meta property="og:description" content="没想到签到题都做的不明不白。。。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/00000000-16359440092291.jpg">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103205859116.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103214050005-16359468552663.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103221957624.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103221903217.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211105175441158.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211104190223277.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/flag.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108184014967.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108183930881.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108192213999.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211114203558581.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211114203712610.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211114203805381.png">
+<meta property="og:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108202849122.png">
+<meta property="og:image" content="https://example.com/2021/11/03/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108203101626.png">
+<meta property="article:published_time" content="2021-11-03T11:35:40.000Z">
+<meta property="article:modified_time" content="2021-11-15T15:28:46.000Z">
+<meta property="article:author" content="Kit Cheung">
+<meta property="article:tag" content="misc">
+<meta property="article:tag" content="reverse">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://example.com/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/00000000-16359440092291.jpg">
+  
+  <title>“东华杯”2021年大学生网络安全邀请赛暨第七届上海市大学生网络安全大赛 - 菜猫的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":" ","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KitCheung</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="“东华杯”2021年大学生网络安全邀请赛暨第七届上海市大学生网络安全大赛">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-03 19:35" pubdate>
+        2021年11月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.2k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      19 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">“东华杯”2021年大学生网络安全邀请赛暨第七届上海市大学生网络安全大赛</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：1 分钟前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h2><h3 id="checkin"><a href="#checkin" class="headerlink" title="checkin"></a>checkin</h3><h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p>+AGYAbABhAGcAewBkAGgAYgBfADcAdABoAH0-</p>
+<h4 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h4><p>去掉+-号base64解码试出来了flag：<code>flag&#123;dhb_7th&#125;</code>，纯属巧合，说一下后来知道的utf-7原理吧</p>
+<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p><strong>UTF-7编码的规则及特点为：</strong></p>
+<p>1）UTF16小于等于 0x7F 的字符，采用ASCII编码；</p>
+<p>2）UTF16大于0x7F的字符，采用Base64编码，然后在首尾分别加上+-；</p>
+<p>3）UTF-7编码后，所有字符均小于等于 0x7F。</p>
+<p>如字符串”A编码示例bC+123”的UTF-7编码为字符串”A+fxZ4AXk6T4s-bC+-123”。”+fxZ4AXk6T4s-“中的fxZ4AXk6T4s是”编码示例”的Base64编码；”+-“表示字符+；其余的保持不变。</p>
+<p>附上<strong>在线网站</strong>：<a target="_blank" rel="noopener" href="http://toolswebtop.com/text/process/decode/UTF-7">UTF-7 Decoder<a/></p>
+<h3 id="project"><a href="#project" class="headerlink" title="project"></a>project</h3><h4 id="题目描述：-1"><a href="#题目描述：-1" class="headerlink" title="题目描述："></a>题目描述：</h4><p>一个普普通通的工程文件</p>
+<h4 id="解题思路：-1"><a href="#解题思路：-1" class="headerlink" title="解题思路："></a>解题思路：</h4><p>伪工控题，离谱</p>
+<p>按修改时间排序，21年的只有text.exe,双击运行一下出现一个压缩包，解压后拖到010，有三段邮件</p>
+<p class="note note-danger">是个eml邮件，加后缀后可通过qq邮箱/outlook打开</p>
+
+<p>第一段base64，大部分解密出表情包吧啦吧啦那段文字，少部分报错</p>
+<p>附上顺手发现的可换表的base解码网站：<a target="_blank" rel="noopener" href="http://web.chacuo.net/netbasex">base系列 Decoder<a/></p>
+<p>第二段quoted-printable，内容还是那段文字</p>
+<p>第三段base64转图片，得到鬼畜表情包。。。。</p>
+<p class="note note-danger">从邮件另存为的jpg和jfif文件头不一样，原因不明，但后来发现jpg中附加字符无了</p>
+
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/00000000-16359440092291.jpg" srcset="/img/loading.gif" lazyload alt="你来了.jfif"></p>
+<p>stegdetect扫了一下，有概率是jphide但没有密码</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103205859116.png" srcset="/img/loading.gif" lazyload alt="stegdetect"></p>
+<p>——这就是当天所有成果了。。。我是菜鸡</p>
+<p>文本在逐字删除时有卡顿，且存在大量<code>E2 80 8C</code>（大佬说的我不理解），说明存在零宽字符，解密得hurryup</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103214050005-16359468552663.png" srcset="/img/loading.gif" lazyload alt="按照默认设置解密"></p>
+<p>把jfif拖进stegsolve里面发现有additional bytes</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103221957624.png" srcset="/img/loading.gif" lazyload alt="对应ASCII码"><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211103221903217.png" srcset="/img/loading.gif" lazyload alt="additional bytes"></p>
+<p>附加字符串+特征值判断OurSecret，用hurryup解密发现有名为f14g的文件，内容就是flag：<code>flag&#123;f3a5dc36-ad43-d4fa-e75f-ef79e2e28ef3&#125;</code></p>
+<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p><strong>零宽字符</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs text">零宽度空格符 (zero-width space) `U+200B` : 用于较长单词的换行分隔<br>零宽度非断空格符 (zero width no-break space) `U+FEFF` : 用于阻止特定位置的换行分隔<br>零宽度连字符 (zero-width joiner) `U+200D` : 用于阿拉伯文与印度语系等文字中，使不会发生连字的字符间产生连字效果<br>零宽度断字符 (zero-width non-joiner) `U+200C` : 用于阿拉伯文，德文，印度语系等文字中，阻止会发生连字的字符间的连字效果<br>左至右符 (left-to-right mark) `U+200E` : 用于在混合文字方向的多种语言文本中（例：混合左至右书写的英语与右至左书写的希伯来语），规定排版文字书写方向为左至右<br>右至左符 (right-to-left mark) `U+200F` : 用于在混合文字方向的多种语言文本中，规定排版文字书写方向为右至左<br><br>零宽字符在浏览器中对应的转义字符<br><br>零宽空格    --- &amp;#8203;  <br>零宽不连字  --- &amp;#8204;<br>零宽连字    --- &amp;#8205;<br></code></pre></td></tr></table></figure>
+
+<p>可用于文本加密，文章水印，逃脱敏感词匹配等方面，可转换为二进制加密或<a target="_blank" rel="noopener" href="http://zero.rovelast.com/">Morse编码加密<a/></p>
+<p>三个解密网站：<a target="_blank" rel="noopener" href="https://www.mzy0.com/ctftools/zerowidth1/">decode1<a/>，<a target="_blank" rel="noopener" href="http://330k.github.io/misc_tools/unicode_steganography.html">decode2<a/>，<a target="_blank" rel="noopener" href="https://yuanfux.github.io/zero-width-web/">decode3(不一定成功)<a/>，<a target="_blank" rel="noopener" href="https://www.diffchecker.com/diff">一个检测网站<a/></p>
+<p><strong>OurSecret</strong>(原理暂不清楚)</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211105175441158.png" srcset="/img/loading.gif" lazyload alt="oursecret特征值"></p>
+<h3 id="JumpJumpTiger"><a href="#JumpJumpTiger" class="headerlink" title="JumpJumpTiger"></a><strong>JumpJumpTiger</strong></h3><h4 id="题目描述：-2"><a href="#题目描述：-2" class="headerlink" title="题目描述："></a>题目描述：</h4><p>flag格式为flag{uuid}</p>
+<h4 id="解题思路：-2"><a href="#解题思路：-2" class="headerlink" title="解题思路："></a>解题思路：</h4><p>拖进ida看到hint,大意是奇偶数分离</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211104190223277.png" srcset="/img/loading.gif" lazyload alt="main函数"></p>
+<p>发现可疑长字符串，从2600h到7D465Fh位置，利用winhex拷出来存入output.txt</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> base64<br><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;output2.txt&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    s = f.read()<br><span class="hljs-comment"># [start:end:step] 从start 提取到end - 1，每step 个字符提取一个</span><br>c = s[::<span class="hljs-number">2</span>]<br><span class="hljs-comment"># with open(&#x27;1.txt&#x27;, &#x27;w&#x27;) as f:</span><br><span class="hljs-comment">#     f.write(c)</span><br><span class="hljs-comment"># print(len(c) % 4)  # 验证长度是否符合base64加密</span><br>m = base64.b64decode(c)<br><span class="hljs-built_in">print</span>(m[:<span class="hljs-number">20</span>])  <span class="hljs-comment"># 判断文件格式</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;1.jpg&#x27;</span>, <span class="hljs-string">&#x27;wb&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    f.write(m)<br><br>c = s[<span class="hljs-number">1</span>::<span class="hljs-number">2</span>]<br>m = base64.b64decode(c)<br><span class="hljs-built_in">print</span>(m[:<span class="hljs-number">20</span>])<br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;1.png&#x27;</span>, <span class="hljs-string">&#x27;wb&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    f.write(m)<br></code></pre></td></tr></table></figure>
+
+<p class="note note-danger">大佬的话：对png做pngcheck，做zsteg发现没东西。但是两张图像作个差，发现有横竖的线，这是盲水印的特征</p>
+
+<p>1.png和1.jpg大小不同，内容一致，猜测盲水印,得到flag：<code>flag&#123;72f73bbe-9193-e59a-c593-1b1cb8f76714&#125;</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd">$ python bwmforpy3.py decode <span class="hljs-number">1</span>.jpg <span class="hljs-number">1</span>.png flag.png  # python3.<span class="hljs-number">8</span><br># image&lt;<span class="hljs-number">1</span>.jpg&gt; + image(encoded)&lt;<span class="hljs-number">1</span>.png&gt; -&gt; watermark&lt;flag.png&gt;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/flag.png" srcset="/img/loading.gif" lazyload alt="flag"></p>
+<h3 id="where-can-find-code"><a href="#where-can-find-code" class="headerlink" title="where_can_find_code"></a><strong>where_can_find_code</strong></h3><h4 id="题目描述：-3"><a href="#题目描述：-3" class="headerlink" title="题目描述："></a>题目描述：</h4><p>无</p>
+<h4 id="解题思路：-3"><a href="#解题思路：-3" class="headerlink" title="解题思路："></a>解题思路：</h4><p>vim或010打开，能发现奇怪的东西</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108184014967.png" srcset="/img/loading.gif" lazyload alt="linux vim"></p>
+<p>在winhex中确认是wbstego隐写，wbStego4.3open解密得20810842042108421</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108183930881.png" srcset="/img/loading.gif" lazyload alt="winhex"></p>
+<p>只由01248组成为云隐密码，脚本解密得BINGO</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">de_code</span>(<span class="hljs-params">c</span>):</span><br>    dic = [<span class="hljs-built_in">chr</span>(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">ord</span>(<span class="hljs-string">&quot;A&quot;</span>), <span class="hljs-built_in">ord</span>(<span class="hljs-string">&quot;Z&quot;</span>) + <span class="hljs-number">1</span>)]<br>    flag = []<br>    c2 = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c.split(<span class="hljs-string">&quot;0&quot;</span>)]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c2:<br>        c3 = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> i:<br>            c3 += <span class="hljs-built_in">int</span>(j)<br>        flag.append(dic[c3 - <span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">return</span> flag<br><br><br>c = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;输入要解密的数字串:&quot;</span>)<br><span class="hljs-built_in">print</span>(de_code(c))<br></code></pre></td></tr></table></figure>
+
+<p>谷歌搜索format(“Translate the letter J into I”);找到<a target="_blank" rel="noopener" href="http://rumkin.com/tools/cipher/playfair.php">网站<a/>。。。。。合理上网我吐了</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108192213999.png" srcset="/img/loading.gif" lazyload alt="解密"></p>
+<p>得到flag：<code>flag &#123;d58af5d2-2a51-4dde-5e5d-33539364cdbf&#125;</code></p>
+<h4 id="知识点：-2"><a href="#知识点：-2" class="headerlink" title="知识点："></a>知识点：</h4><p><strong>wbStego4open</strong>是一个隐写开源工具，它支持Windows和Linux平台。 你可以用wbStego4open可以把文件隐藏到BMP、TXT、HTM和PDF文件中，且不会被看出破绽。 还可以用它来创建版权标识文件并嵌入到文件中将其隐藏。 wbStego在插入数据时（此处以非加密的版权信息为例），充分利用了插入法和LSB修改法两种技术。 wbStego4open会把插入数据中的每一个ASCII码转换为二进制形式， 然后把每一个二进制数字再替换为十六进制的20或者09，20代表0，09代表1。 例如，在wbStego4open的版权管理器（Copyright Manager）中，输入一个包含“Oblivion”的地址， wbStego4open就会将其由ASCII码转换成相应的二进制码， 然后再用0x20和0x09替换每个二进制数。</p>
+<p><strong>云影密码（01248密码）</strong></p>
+<p>英文字母从a到z一共有26个，此时我们可以用某些特殊的数字来替换字母，云影密码也就因此出现。</p>
+<p>云影密文只由5个数字组成：01248，那么，如何使用这5个数字代表26个英文字母？</p>
+<p>云影加密用的是加和的方式，即：1-26之前的数字都可以用1248这四个数字来加和得到，有了密文与明文之间的对应关系。引入0来作为间隔，以免出现混乱。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs txt">a 1 1		1<br>b 2 2		2<br>c 3 1+2		12<br>d 4 4		4<br>e 5 1+4		14<br>f 6 2+4		24<br>g 7 1+2+4	124<br>h 8 8		8<br>.<br>.<br>.<br>z 26 1+1+2+2+4+8+8<br></code></pre></td></tr></table></figure>
+
+<p>举个例子：huluxia这七个字母加密之后就是801488048014880448801801</p>
+<p>有一个问题，那就是既然是加和的方式，加密后的密文就不会只有一种，比如上面的例子，还可以是11240144480228014880888014401</p>
+<p>解密时，直接将0分隔开的几个部分分别加和，然后按字母表顺序找对应位置的字母就行</p>
+<h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h2><p>两道安卓的先列这之后再说</p>
+<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a><strong>hello</strong></h3><h4 id="题目描述：-4"><a href="#题目描述：-4" class="headerlink" title="题目描述："></a>题目描述：</h4><p>hello world!</p>
+<h4 id="解题思路：-4"><a href="#解题思路：-4" class="headerlink" title="解题思路："></a>解题思路：</h4><h3 id="Hell’s-Gate"><a href="#Hell’s-Gate" class="headerlink" title="Hell’s Gate"></a><strong>Hell’s Gate</strong></h3><h4 id="题目描述：-5"><a href="#题目描述：-5" class="headerlink" title="题目描述："></a>题目描述：</h4><p>Welcome to the hell’s gate!</p>
+<h4 id="解题思路：-5"><a href="#解题思路：-5" class="headerlink" title="解题思路："></a>解题思路：</h4><h3 id="mod"><a href="#mod" class="headerlink" title="mod"></a><strong>mod</strong></h3><h4 id="题目描述：-6"><a href="#题目描述：-6" class="headerlink" title="题目描述："></a>题目描述：</h4><p>花花总喜欢把东西隐藏起来。</p>
+<h4 id="解题思路：-6"><a href="#解题思路：-6" class="headerlink" title="解题思路："></a>解题思路：</h4><p>各种栈指针不平衡反编译出错，看到相邻跳转和各种call，很明显是花指令</p>
+<p>从0x401203~0x401221全部nop掉，从0x4013E4~0x4013EF全部nop掉,发现还有不平衡的上下多nop掉0x401222的db36，删除掉被nop部分的函数，之后c一下转换为代码（可以省略），p重新声明函数，再次反编译。</p>
+<p>图示详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/g12231/article/details/121133921"><br>Tiany^ ^<a/>，去掉花指令后很清晰，关键代码如下</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211114203558581.png" srcset="/img/loading.gif" lazyload alt="main函数"></p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211114203712610.png" srcset="/img/loading.gif" lazyload alt="sub_401320函数"></p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211114203805381.png" srcset="/img/loading.gif" lazyload alt="sub_4011A0函数"></p>
+<p>既然知道魔改base64，写脚本的方法还挺多的，①z3应该是最直观的，还可以②爆破，即先打表所有4byte base64编码字符串到3byte明文的映射，然后在解码的时候查表，③纯逆向。。。反正我做不到，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> z3<br><br>enc = <span class="hljs-string">&#x27;2aYcdfL2fS1BTMMF1RSeMTTASS1OJ8RHTJdBYJ2STJfNMSMAYcKUJddp&#x27;</span><br>byte_405018 = <span class="hljs-string">&#x27;ABCDFEGH1JKLRSTMNP0VWQUXY2a8cdefijklmnopghwxyqrstuvzOIZ34567b9+/&#x27;</span><br>flag = <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(enc), <span class="hljs-number">4</span>):<br>    a0 = byte_405018.index(enc[i + <span class="hljs-number">0</span>])  <span class="hljs-comment"># 字母对应在base表中的位置即返回重新分组后的值</span><br>    a1 = byte_405018.index(enc[i + <span class="hljs-number">1</span>])<br>    a2 = byte_405018.index(enc[i + <span class="hljs-number">2</span>])<br>    a3 = byte_405018.index(enc[i + <span class="hljs-number">3</span>])<br>    a = [z3.BitVec(<span class="hljs-string">&quot;a&#123;&#125;&quot;</span>.<span class="hljs-built_in">format</span>(j), <span class="hljs-number">8</span>) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>)]  <span class="hljs-comment"># 生成一维数组a[0]~a[2]</span><br>    s = z3.Solver()<br>    <span class="hljs-comment"># 选择&gt;&gt;利用assert在&#125;时会出错，故正常运算未输出&#125;，逆运算一步即可，原因未知</span><br>    <span class="hljs-comment"># s.add(((4 * (a[2] &amp; 3)) | a[1] &amp; 0x30 | a[0] &amp; 0xC0) == a0 &lt;&lt; 2)</span><br>    <span class="hljs-comment"># s.add(((4 * (a[0] &amp; 3)) | a[2] &amp; 0x30 | a[1] &amp; 0xC0) == a1 &lt;&lt; 2)</span><br>    <span class="hljs-comment"># s.add(((4 * (a[1] &amp; 3)) | a[0] &amp; 0x30 | a[2] &amp; 0xC0) == a2 &lt;&lt; 2)</span><br>    <span class="hljs-comment"># s.add((a[2] &amp; 0xC | (4 * a[1]) &amp; 0x30 | (16 * a[0]) &amp; 0xC0) == a3 &lt;&lt; 2)</span><br>    <span class="hljs-comment"># assert s.check() == z3.sat</span><br>    <span class="hljs-comment"># solve = s.model()</span><br>    <span class="hljs-comment"># flag += &quot;&quot;.join([chr(solve.eval(j).as_long()) for j in a])</span><br>    s.add(((<span class="hljs-number">4</span> * (a[<span class="hljs-number">2</span>] &amp; <span class="hljs-number">3</span>)) | a[<span class="hljs-number">1</span>] &amp; <span class="hljs-number">0x30</span> | a[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0xC0</span>) &gt;&gt; <span class="hljs-number">2</span> == a0)<br>    s.add(((<span class="hljs-number">4</span> * (a[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">3</span>)) | a[<span class="hljs-number">2</span>] &amp; <span class="hljs-number">0x30</span> | a[<span class="hljs-number">1</span>] &amp; <span class="hljs-number">0xC0</span>) &gt;&gt; <span class="hljs-number">2</span> == a1)<br>    s.add(((<span class="hljs-number">4</span> * (a[<span class="hljs-number">1</span>] &amp; <span class="hljs-number">3</span>)) | a[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0x30</span> | a[<span class="hljs-number">2</span>] &amp; <span class="hljs-number">0xC0</span>) &gt;&gt; <span class="hljs-number">2</span> == a2)<br>    s.add((a[<span class="hljs-number">2</span>] &amp; <span class="hljs-number">0xC</span> | (<span class="hljs-number">4</span> * a[<span class="hljs-number">1</span>]) &amp; <span class="hljs-number">0x30</span> | (<span class="hljs-number">16</span> * a[<span class="hljs-number">0</span>]) &amp; <span class="hljs-number">0xC0</span>) &gt;&gt; <span class="hljs-number">2</span> == a3)<br>    <span class="hljs-keyword">if</span> s.check() == z3.sat:<br>        solve = s.model()<br>        flag += <span class="hljs-string">&quot;&quot;</span>.join([<span class="hljs-built_in">chr</span>(solve.<span class="hljs-built_in">eval</span>(j).as_long()) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> a])  <span class="hljs-comment"># as_long将变量类型z3.ArithRef转换为int型</span><br><span class="hljs-built_in">print</span>(flag)<br></code></pre></td></tr></table></figure>
+
+<p>得到flag：<code>flag&#123;5a073724-8223-413d-11fa-d53b133df89e&#125;</code></p>
+<h3 id="ooo"><a href="#ooo" class="headerlink" title="ooo"></a><strong>ooo</strong></h3><h4 id="题目描述：-7"><a href="#题目描述：-7" class="headerlink" title="题目描述："></a>题目描述：</h4><p>如何解呢？</p>
+<h4 id="解题思路：-7"><a href="#解题思路：-7" class="headerlink" title="解题思路："></a>解题思路：</h4><p>根据关键字符串定位函数，sub_418970作用没搞懂，像是转换成unti32?</p>
+<p><img src="/img/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108202849122.png" srcset="/img/loading.gif" lazyload alt="main函数"></p>
+<p>关键字符串被<code>^0x17</code>加密过</p>
+<p><img src="%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/image-20211108203101626.png" srcset="/img/loading.gif" lazyload alt="dword_4C0100"></p>
+<p>爆破yyds</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python">dword_4C0100 = [<span class="hljs-number">0x11</span>, <span class="hljs-number">0x11B</span>, <span class="hljs-number">0x216</span>, <span class="hljs-number">0x310</span>, <span class="hljs-number">0x40C</span>, <span class="hljs-number">0x546</span>, <span class="hljs-number">0x644</span>, <span class="hljs-number">0x711</span>, <span class="hljs-number">0x844</span>, <span class="hljs-number">0x942</span>, <span class="hljs-number">0x0A41</span>, <span class="hljs-number">0x0B41</span>, <span class="hljs-number">0x0C44</span>, <span class="hljs-number">0x0D5A</span>, <span class="hljs-number">0x0E42</span>, <span class="hljs-number">0x0F47</span>, <span class="hljs-number">0x1016</span>, <span class="hljs-number">0x1143</span>, <span class="hljs-number">0x125A</span>, <span class="hljs-number">0x1343</span>, <span class="hljs-number">0x1440</span>, <span class="hljs-number">0x1540</span>, <span class="hljs-number">0x1615</span>, <span class="hljs-number">0x175A</span>, <span class="hljs-number">0x1845</span>, <span class="hljs-number">0x1940</span>, <span class="hljs-number">0x1A4F</span>, <span class="hljs-number">0x1B15</span>, <span class="hljs-number">0x1C5A</span>, <span class="hljs-number">0x1D15</span>, <span class="hljs-number">0x1E40</span>, <span class="hljs-number">0x1F46</span>, <span class="hljs-number">0x2046</span>, <span class="hljs-number">0x2147</span>, <span class="hljs-number">0x2245</span>, <span class="hljs-number">0x2341</span>, <span class="hljs-number">0x2411</span>, <span class="hljs-number">0x2511</span>, <span class="hljs-number">0x2640</span>, <span class="hljs-number">0x2716</span>, <span class="hljs-number">0x2813</span>, <span class="hljs-number">0x290A</span>]<br>dword_4C0100_ = [<span class="hljs-number">0</span>] * <span class="hljs-number">41</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">41</span>):<br>    dword_4C0100_[i] = dword_4C0100[i] ^ <span class="hljs-number">0x17</span><br><span class="hljs-comment"># unk_4C05C0 = [0x88, 0x20, 0x0AD, 0x0FB]  # 不知道这个频繁被调用的东西有什么用</span><br>flag = <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">127</span>):<br>    arr = [<span class="hljs-built_in">chr</span>((k ^ m) &amp; <span class="hljs-number">0xff</span>) <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> dword_4C0100_]  <span class="hljs-comment"># &amp;0xff 确保为可见字符</span><br>    flag = <span class="hljs-string">&quot;&quot;</span>.join(arr)<br>    <span class="hljs-keyword">if</span> flag.startswith(<span class="hljs-string">&quot;flag&#123;&quot;</span>):  <span class="hljs-comment"># 检测字符串是否以指定的前缀开始</span><br>        <span class="hljs-built_in">print</span>(flag)<br></code></pre></td></tr></table></figure>
+
+<p>得到flag：<code>flag&#123;13f35663-50a4-477b-278b-b711026ff7ad&#125;</code></p>
+<h2 id="参考wp："><a href="#参考wp：" class="headerlink" title="参考wp："></a>参考wp：</h2><p><strong>misc：</strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/428155635">ZM.J<a/>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42815161/article/details/121076575?utm_source=app&app_version=4.17.2&code=app_1562916241&uLinkId=usr1mkqgl919blen">塞纳河畔的春水<a/></p>
+<p><strong>reverse：</strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/428480534">ZM.J<a/>，<a target="_blank" rel="noopener" href="https://blog.shi1011.cn/ctf/1750">Mas0n<a/>，<a target="_blank" rel="noopener" href="https://www.cnblogs.com/crfshadow/p/15510372.html#_label4">寒江寻影<a/>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/g12231/article/details/121133921">Tiany^ ^（救我花指令）<a/></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Writeup/">Writeup</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/misc/">misc</a>
+                    
+                      <a class="hover-with-bg" href="/tags/reverse/">reverse</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/09/25/DASCTF-Sept-X-%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E7%A7%8B%E5%AD%A3%E6%8C%91%E6%88%98%E8%B5%9B/">
+                        <span class="hidden-mobile">DASCTF Sept X 浙江工业大学秋季挑战赛</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'k1tcheung/commit-utterance');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            承蒙 
+            <span id="busuanzi_value_site_uv"></span>
+             位朋友
+          </span>
+      
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            造访 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+    
+  </div>
+
+
+  
+    <div class="datatime">
+        <!-- 网站运行时间的设置 -->
+        <span id="timeDate">载入天数...</span>
+        <span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date();
+            function createtime() { 
+                var grt= new Date("08/30/2021 00:00:00");//此处修改你的建站时间或者网站上线时间 
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "本站已小心翼翼地运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒了~"; 
+            } 
+        setInterval("createtime()",250);
+  </script>
+    </div>
+
+  
+
+  
+</footer>
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/js/diy/click_show_text.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+  <!--单击显示文字-->
+  <script type="text/javascript" src="/js/diy/click_show_text.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":30,"vOffset":-50},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
