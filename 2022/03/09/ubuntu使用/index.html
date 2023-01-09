@@ -1,0 +1,784 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="会继续学。。。。的吧">
+  <meta name="author" content="Kit Cheung">
+  <meta name="keywords" content="">
+  <meta name="description" content="会继续学。。。。的吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu使用">
+<meta property="og:url" content="https://example.com/2022/03/09/ubuntu%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="菜猫的博客">
+<meta property="og:description" content="会继续学。。。。的吧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://example.com/img/ubuntu%E4%BD%BF%E7%94%A8/UU%5DQRJUY6C$@M%7D1D$@20UQ.png">
+<meta property="og:image" content="https://example.com/img/ubuntu%E4%BD%BF%E7%94%A8/image-20220309132822788-16468037082551.png">
+<meta property="og:image" content="https://example.com/img/ubuntu%E4%BD%BF%E7%94%A8/image-20220309133018142-16468038195022.png">
+<meta property="og:image" content="https://example.com/img/ubuntu%E4%BD%BF%E7%94%A8/20191212143313392.png">
+<meta property="og:image" content="https://example.com/img/ubuntu%E4%BD%BF%E7%94%A8/image-20220309135156957.png">
+<meta property="article:published_time" content="2022-03-09T05:22:59.000Z">
+<meta property="article:modified_time" content="2023-01-09T09:26:48.000Z">
+<meta property="article:author" content="Kit Cheung">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://example.com/img/ubuntu%E4%BD%BF%E7%94%A8/UU%5DQRJUY6C$@M%7D1D$@20UQ.png">
+  
+  <title>ubuntu使用 - 菜猫的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":" ","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KitCheung</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="ubuntu使用">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-09 13:22" pubdate>
+        2022年3月9日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      6.4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">ubuntu使用</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：5 小时前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1>Linux基础</h1>
+<p><img src="/img/ubuntu%E4%BD%BF%E7%94%A8/UU%5DQRJUY6C$@M%7D1D$@20UQ.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>快捷键：</strong></p>
+<p>tab	自动补全</p>
+<p>ctrl + l	清理终端显示</p>
+<p>ctrl + c	终止当前操作</p>
+<p><strong>新建</strong>：<code>mkdir a.txt</code></p>
+<p>​			<code>touch a.py</code></p>
+<p><strong>查看</strong>：</p>
+<p>​	目录：<code>ls</code></p>
+<p>​				<code>pwd</code></p>
+<p>​	文件内容：<code>cat a.txt</code></p>
+<p><strong>切换</strong>：<code>cd /home</code></p>
+<p>​			<code>cd -</code></p>
+<p>​			<code>cd ~</code></p>
+<p><strong>编辑</strong>：<code>vi a.py</code></p>
+<p>a/i	编辑模式</p>
+<p>w	写入</p>
+<p>q	退出</p>
+<p>！强制</p>
+<p><strong>显示</strong>：至终端：<code>echo “666”</code></p>
+<p>​			写入文件：<code>echo &quot;666&quot; &gt; /a</code></p>
+<p><strong>复制</strong>：<code>cp a.py /a/</code>	移动</p>
+<p>​			<code>cp a.py /a/b.py</code>	移动并改名</p>
+<p>​			<code>cp -r</code>	复制目录</p>
+<p>​			<code>cp -p</code>	复制文件并保持属性不变</p>
+<p>​			<code>cp -a</code>	相当于 -<em>pdr</em> 的意思(保留权限,复制软链接本身,递归复制 )</p>
+<p>​			备份文件加后缀<code>.bak</code></p>
+<p><strong>剪切</strong>：<code>mv /home/Desktop/a /tmp/a</code></p>
+<p><strong>删除</strong>：<code>rm</code></p>
+<p>​			<code>-r</code>	删除目录</p>
+<p>​			<code>-f</code>	取消提示</p>
+<p><strong>查找</strong>：<code>find /tmp/ -type f -name &quot;*.txt&quot;</code>	找出所有以 .txt 结尾的文件</p>
+<p>​			which：查找并显示给定命令的绝对路径，环境变量PATH中保存了查找命令时需要遍历的目录。</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs diff">语法<br>which 【参数】【文件】<br><br>参数：<br><br><span class="hljs-deletion">-n&lt;文件名长度&gt; 　指定文件名长度，指定的长度必须大于或等于所有文件中最长的文件名。</span><br><span class="hljs-deletion">-p&lt;文件名长度&gt; 　与-n参数相同，但此处的&lt;文件名长度&gt;包括了文件的路径。</span><br><span class="hljs-deletion">-w 　指定输出时栏位的宽度。</span><br><span class="hljs-deletion">-V 　显示版本信息。</span><br></code></pre></td></tr></table></figure>
+<p><strong>alias</strong>：别名</p>
+<p><strong>seq</strong>：seq命令用于产生从某个数到另外一个数之间的所有整数。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs perl">语法<br>se<span class="hljs-string">q [选项]</span>... 尾数<br>se<span class="hljs-string">q [选项]</span>... 首数 尾数<br>se<span class="hljs-string">q [选项]</span>... 首数 增量 尾数<br>参数<br>-f, --<span class="hljs-keyword">format</span>=格式        使用<span class="hljs-keyword">printf</span> 样式的浮点格式<br>-s, --separator=字符串   使用指定字符串分隔数字（默认使用：\n）<br>-w, --equal-width        在列前添加<span class="hljs-number">0</span> 使得宽度相同<br></code></pre></td></tr></table></figure>
+<p>scp：Linux scp命令用于Linux之间复制文件和目录。scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs elixir">语法<br>scp 【可选参数】 本地源文件 远程文件标记<br>参数<br>-r <span class="hljs-symbol">:</span>递归复制整个目录<br>-<span class="hljs-symbol">v:</span>详细方式输出<br>-<span class="hljs-symbol">q:</span>不显示传输进度条<br>-C：允许压缩<br>实例<br><span class="hljs-comment">#复制远程文件到本地</span><br>scp root<span class="hljs-variable">@192</span>.<span class="hljs-number">168.1</span>.<span class="hljs-number">155</span><span class="hljs-symbol">:/home/oldboy</span>.txt /tmp/oldboy.txt<br>scp -r root<span class="hljs-variable">@192</span>.<span class="hljs-number">168.1</span>.<span class="hljs-number">155</span><span class="hljs-symbol">:/home/oldboy</span> /home/<br></code></pre></td></tr></table></figure>
+<p><strong>du</strong>：Linux du命令用于显示目录或文件的大小。du会显示指定的目录或文件所占用的磁盘空间。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">用法<br><span class="hljs-built_in">du</span> 【参数】【文件或目录】-s 显示总计-h 以k，M,G为单位显示，可读性强<br><span class="hljs-comment">#什么都不跟，代表显示当前目录所有文件大小</span><br><span class="hljs-built_in">du</span>   <br></code></pre></td></tr></table></figure>
+<p><strong>top</strong>：inux的top指令用于实时显示process的动态</p>
+<p><strong>head、tail</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">head</span>显示文件前几行，默认前10行<br><span class="hljs-built_in">tail</span>显示文件后几行，默认后10行<br><span class="hljs-comment">#显示文件10-30行</span><br><span class="hljs-built_in">head</span> -30 /tmp/oldboy.txt |<span class="hljs-built_in">tail</span> -21<br></code></pre></td></tr></table></figure>
+<p><strong>grep</strong>：全面搜索正则表达式并把行打印出来)是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs ada">语法：<br>grep [参数] [<span class="hljs-comment">--color=auto] [字符串] filename</span><br>参数详解:<br>-i : 忽略大小写<br>-n : 输出行号<br>-v : 反向选择<br><span class="hljs-comment">--color = auto : 给关键词部分添加颜色</span><br></code></pre></td></tr></table></figure>
+<p><strong>管道命令</strong>：Linux提供的管道符“|”讲两条命令隔开，管道符左边命令的输出会作为管道符右边命令的输入。</p>
+<p><strong>sh</strong>：命令启动shell（.sh文件）脚本，避免./运行无权限（没有配置在环境变量(PATH)中）</p>
+<p>==<strong>xargs</strong>==：给命令传递参数的一个过滤器，也是组合多个命令的一个工具。</p>
+<p><code>-e flag </code>	注意有的时候可能会是-E，flag必须是一个以空格分隔的标志，当xargs分析到含有flag这个标志的时候就停止。</p>
+<p><code>-t</code>	表示先打印命令，然后再执行。</p>
+<p><code>-i</code>	或者是-I，这得看linux支持了，将xargs的每项名称，一般是一行一行赋值给 {}，可以用 {} 代替。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs shell">实例<br><br>xargs 用作替换工具，读取输入数据重新格式化后输出。<br><br>定义一个测试文件，内有多行文本数据：<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">cat</span> test.txt</span><br><br>a b c d e f g<br>h i j k l m n<br>o p q<br>r s t<br>u v w x y z<br><br>多行输入单行输出：<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">cat</span> test.txt | xargs</span><br>a b c d e f g h i j k l m n o p q r s t u v w x y z<br><br>-n 选项多行输出：<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">cat</span> test.txt | xargs -n3</span><br><br>a b c<br>d e f<br>g h i<br><br>-d 选项可以自定义一个定界符：<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;nameXnameXnameXname&quot;</span> | xargs -dX</span><br><br>name name name name<br><br>结合 -n 选项使用：<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;nameXnameXnameXname&quot;</span> | xargs -dX -n2</span><br><br>name name<br>name name<br><br>xargs 的一个选项 -I，使用 -I 指定一个替换字符串 &#123;&#125;，这个字符串在 xargs 扩展时会被替换掉，当 -I 与 xargs 结合使用，每一个参数命令都会被执行一次：<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">cat</span> arg.txt | xargs -I &#123;&#125; ./sk.sh -p &#123;&#125; -l</span><br><br>-p aaa -l<br>-p bbb -l<br>-p ccc -l<br></code></pre></td></tr></table></figure>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-xargs.html">菜鸟教程</a></p>
+<p><strong>sed</strong></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-sed.html">菜鸟教程</a></p>
+<p><strong>awk</strong></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-awk.html">菜鸟教程</a></p>
+<p>==<strong>Shell特殊变量</strong>==：Shell $0, $#, $*, $@, $?, $$和命令行参数</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/davygeek/p/5670212.html">博客园</a></p>
+<h1>一、换源</h1>
+<ol>
+<li>首先需要使用root用户</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo -s</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>进行源码备份.</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cp <span class="hljs-regexp">/etc/</span>apt<span class="hljs-regexp">/sources.list /</span>etc<span class="hljs-regexp">/apt/</span>sources.list.bak<br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li>进行源列表的修改</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">vi <span class="hljs-regexp">/etc/</span>apt/sources.list<br></code></pre></td></tr></table></figure>
+<p>将sources.list中的内容提换如下</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment">#ubuntu 18.04</span><br><br><span class="hljs-comment"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br>deb https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/ubuntu/</span> bionic main restricted universe multiverse<br><span class="hljs-comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br>deb https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/ubuntu/</span> bionic-updates main restricted universe multiverse<br><span class="hljs-comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br>deb https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/ubuntu/</span> bionic-backports main restricted universe multiverse<br><span class="hljs-comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br>deb https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/ubuntu/</span> bionic-security main restricted universe multiverse<br><span class="hljs-comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><br><span class="hljs-comment"># 预发布软件源，不建议启用</span><br><span class="hljs-comment"># deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="hljs-comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br></code></pre></td></tr></table></figure>
+<ol start="5">
+<li>执行更新列表</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">sudo apt-get update<br></code></pre></td></tr></table></figure>
+<p>6.如出现以下问题，把软件源里的https改成http就行了</p>
+<p><img src="/img/ubuntu%E4%BD%BF%E7%94%A8/image-20220309132822788-16468037082551.png" srcset="/img/loading.gif" lazyload alt="image-20220309132822788"></p>
+<p>成功如图所示</p>
+<p><img src="/img/ubuntu%E4%BD%BF%E7%94%A8/image-20220309133018142-16468038195022.png" srcset="/img/loading.gif" lazyload alt="image-20220309133018142"></p>
+<h1>二、vim编辑器使用</h1>
+<p><strong>第一、升级Python 3.6 至 3.7</strong></p>
+<p>1、更新镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs none">sudo apt update<br>sudo apt install software-properties-common<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>2、将Deadsnakes PPA添加到源列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">sudo add-apt-repository ppa:deadsnakes/ppa<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>3、安装Python3,7</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">sudo apt install python3.7<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>实际上已经安装到新版本的3.7，我们可以看看是不是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">python3.7 --version<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>4、将Python 3.6和Python 3.7添加到替代项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs none">sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1<br>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>5、更新指向</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">sudo update-alternatives --config python3<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>然后我们再去检查就是已经是Python3.7新版本默认。</p>
+<p><strong>第二、直接安装Python3.7并设置默认</strong></p>
+<p>1、升级包索引和软件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">apt update -y<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>2、安装编译需要的软件包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">apt install build-essential zlib1g-dev libbz2-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev -y<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>3、下载版本和编译安装</p>
+<p>目前最新版本是3.9，但是我们还是不要用到最新版本，比如常用的就是3.7或者3.8.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>然后解压</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs none">tar -zxvf Python-3.7.9.tgz<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>编译安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs none">cd Python-3.7.9<br>./configure --prefix=/usr/local/src/python37<br>sudo make<br>sudo make install<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>4、建议软连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs none">ln -s /usr/local/src/python37/bin/python3.7 /usr/bin/python3.7<br>ln -s /usr/local/src/python37/bin/pip3.7 /usr/bin/pip3.7<br></code></pre></td></tr></table></figure>
+<p>Select Code</p>
+<p>Copy</p>
+<p>如果我们希望替代之前的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs none">rm -rf /usr/bin/python3<br>ln -s /usr/local/src/python37/bin/python3.7 /usr/bin/python3<br></code></pre></td></tr></table></figure>
+<h1>三、更改python版本</h1>
+<h3 id="修改Python软链接">修改Python软链接</h3>
+<p>1.查看使用的版本</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">$ <span class="hljs-keyword">python</span> --<span class="hljs-keyword">version</span><br></code></pre></td></tr></table></figure>
+<p>2.查看当前所使用版本的位置</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mel">$ which <span class="hljs-keyword">python</span><br>$ whereis <span class="hljs-keyword">python</span><br>查看所有<span class="hljs-keyword">python</span>版本所在位置<br></code></pre></td></tr></table></figure>
+<p>3.如果第二步结果是</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ <span class="hljs-regexp">/usr/</span>bin/python<br></code></pre></td></tr></table></figure>
+<p>则直接删除即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">sudo <span class="hljs-built_in">rm</span> /usr/bin/python</span><br></code></pre></td></tr></table></figure>
+<p>如果不在以上文件夹中，则修改名字，不要删除，如下</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ sudo mv <span class="hljs-regexp">/home/u</span>stc<span class="hljs-regexp">/anaconda3/</span>bin<span class="hljs-regexp">/python /</span>home<span class="hljs-regexp">/ustc/</span>anaconda3<span class="hljs-regexp">/bin/</span>python3.<span class="hljs-number">6.4</span><br></code></pre></td></tr></table></figure>
+<p>4.创建新的软链接</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ sudo ln -s <span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/python2.7 /u</span>sr<span class="hljs-regexp">/bin/</span>python<br></code></pre></td></tr></table></figure>
+<p>5.查看结果</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">$ <span class="hljs-keyword">python</span> --<span class="hljs-keyword">version</span><br></code></pre></td></tr></table></figure>
+<h1>四、root权限</h1>
+<p><strong>一、获得永久root权限</strong></p>
+<p>1.为root设置初始密码</p>
+<p>（1）登录系统，打开终端，输入命令：</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xquery">$ sudo passwd<span class="hljs-built_in"> root</span><br><span class="hljs-built_in">为root</span>用户设置密码<br></code></pre></td></tr></table></figure>
+<p>（2）设置root密码（建议简单点，没必要那么复杂）；</p>
+<p>（3）重复root密码；</p>
+<p>2.修改/usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf文件内容</p>
+<p>终端输入：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo gedit <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/lightdm/</span>lightdm.conf.d/<span class="hljs-number">50</span>-ubuntu.conf<br></code></pre></td></tr></table></figure>
+<p>打开文件，在文件末尾加入如下两行，完成后保存并关闭（注意这一步，千万不要删除文件中原本的两行内容）；</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">greeter-show-manual-login</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">all-guest</span>=<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<p><img src="/img/ubuntu%E4%BD%BF%E7%94%A8/20191212143313392.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>3.进入/etc/pam.d文件夹下，修改gdm-autologin和gdm-password文件内容（参考第2步的命令）：</p>
+<p>gdm-autologin文件注释掉auth required pam_success_if.so user!=root quiet_success这一行</p>
+<p>gdm-password文件注释掉auth required pam_success_if.so user!=root quiet_success这一行</p>
+<p>说明：注释只需要在这一行前加&quot;#&quot;即可，例如：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-id">#auth</span> required pam_success_if<span class="hljs-selector-class">.so</span> user!=root quiet_success<br></code></pre></td></tr></table></figure>
+<p>4.修改/root/.profile文件</p>
+<p>终端输入：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sudo gedit <span class="hljs-regexp">/root/</span>.profile<br></code></pre></td></tr></table></figure>
+<p>打开文件，将最后一行改为以下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">tty</span> -s &amp;&amp; mesg n || <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>保存并关闭，重启，重启之后选择“未列出”输入账号root和密码；</p>
+<p><strong>二、临时root权限</strong></p>
+<p>法一</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crystal"><span class="hljs-variable">$ </span>sudo su<br></code></pre></td></tr></table></figure>
+<p>法二</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crystal"><span class="hljs-variable">$ </span>sudo passwd<br>更新密码<br><span class="hljs-variable">$ </span>su<br></code></pre></td></tr></table></figure>
+<h1>五、报错处理</h1>
+<h2 id="（一）Could-not-get-lock-var-lib-dpkg-lock-frontend">（一）Could not get lock /var/lib/dpkg/lock-frontend</h2>
+<p><strong>使用apt安装时报错：</strong></p>
+<p><img src="/img/ubuntu%E4%BD%BF%E7%94%A8/image-20220309135156957.png" srcset="/img/loading.gif" lazyload alt="image-20220309135156957"></p>
+<p><strong>解决方案：</strong></p>
+<p>法一：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">找到apt进程<br><span class="hljs-variable">$</span> <span class="hljs-built_in">ps</span> <span class="hljs-literal">-A</span>|grep apt<br></code></pre></td></tr></table></figure>
+<p>如果显示</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">5873 </span>?    <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">01</span> apt-<span class="hljs-keyword">get</span><br></code></pre></td></tr></table></figure>
+<p>就执行</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">kill</span>掉找到的进程<br><span class="hljs-variable">$</span> sudo <span class="hljs-built_in">kill</span> <span class="hljs-literal">-9</span> processnumber（进程号）<br><br><span class="hljs-variable">$</span> sudo <span class="hljs-built_in">kill</span> <span class="hljs-number">5873</span><br></code></pre></td></tr></table></figure>
+<p>法二：执行</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">sudo killall apt apt-<span class="hljs-keyword">get</span><br></code></pre></td></tr></table></figure>
+<p>如果提示没有apt进程：</p>
+<pre><code>apt: no process found
+apt-get: no process found
+</code></pre>
+<p>依次执行删除lock文件：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs gradle"># 移除 <span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/dpkg/</span> 文件夹下的锁定文件<br>sudo rm <span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/apt/</span>lists/lock<br>sudo rm <span class="hljs-regexp">/var/</span>cache<span class="hljs-regexp">/apt/</span>archives/lock<br>sudo rm <span class="hljs-regexp">/var/</span>lib<span class="hljs-regexp">/dpkg/</span>lock*<br># 强制重新配置软件包<br>sudo dpkg --configure -a<br>sudo apt update<br></code></pre></td></tr></table></figure>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/15/volatility%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">volatility源码安装</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/03/%E2%80%9C%E4%B8%9C%E5%8D%8E%E6%9D%AF%E2%80%9D2021%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%82%80%E8%AF%B7%E8%B5%9B%E6%9A%A8%E7%AC%AC%E4%B8%83%E5%B1%8A%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B/">
+                        <span class="hidden-mobile">“东华杯”2021年大学生网络安全邀请赛暨第七届上海市大学生网络安全大赛</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'k1tcheung/commit-utterance');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            承蒙 
+            <span id="busuanzi_value_site_uv"></span>
+             位朋友
+          </span>
+      
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            造访 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+    
+  </div>
+
+
+  
+    <div class="datatime">
+        <!-- 网站运行时间的设置 -->
+        <span id="timeDate">载入天数...</span>
+        <span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date();
+            function createtime() { 
+                var grt= new Date("08/30/2021 00:00:00");//此处修改你的建站时间或者网站上线时间 
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "本站已小心翼翼地运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒了~"; 
+            } 
+        setInterval("createtime()",250);
+  </script>
+    </div>
+
+  
+
+  
+</footer>
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+<script src="/js/diy/click_show_text.js"></script>
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+  <!--单击显示文字-->
+  <script type="text/javascript" src="/js/diy/click_show_text.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":30,"vOffset":-50},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
